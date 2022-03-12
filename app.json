@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/functionPage/functionPage",
+    "pages/about/about/about",
+    "pages/about/home/home",
+    "pages/about/log/log",
+    "pages/about/test/list",
+    "pages/firstpage/firstpage",
+    "pages/ble/ble"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "智能传感检测终端",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+    
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}
