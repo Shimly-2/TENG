@@ -12,8 +12,7 @@
 
 
 ### 二、主要效果图
-<img border="1" src="./screenshots/1.jpg" width="310" height="auto">
-<img border="1" src="./screenshots/2.jpg" width="310" height="auto">
+
 
 ### 三、简述
 #### 1.蓝牙BLE调试工具终于上线了！
@@ -48,8 +47,3 @@
 * ios和Android扫描蓝牙获取到的deviceId不一样
 * 等等等
 
-### 四、欢迎体验
-* 目前小程序已经上线，整个开发流程也算是大概了解和尝试过了。最后贴出小程序码，欢迎体验！
-* <img border="1" src="./screenshots/wcode.jpg" width="200" height="auto">
-* 最近建了公众号，欢迎大家关注，一起学习Android、小程序、跨平台开发~
-* ![](./screenshots/myQrcode.jpg)
