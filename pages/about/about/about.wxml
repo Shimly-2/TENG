@@ -1,0 +1,11 @@
+<!-- <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom> -->
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于??:TENG</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用智能传感终端！</view>
+    <view class='margin-top-sm'>    在当代车路协同和人工智能时代，相比于传统的更换电池或充电维护的有源传感器，无源传感器的研发无疑是实现车端-路域协同感知的最佳选择。如何通过无源传感器将车辆行驶过程中的易耗散能源收集并有效利用是我们项目的主要研究方向。</view>
+    <view class='margin-top-sm'>    考虑到摩擦纳米发电效率高、尺寸小等众多优点，本项目为适应轮胎与路面间接触状态，拟综合利用单电极与接触分离模式摩擦发电原理，并结合折纸技术，以多层折纸结构显著放大摩擦起电和静电感应现象，实现折纸-摩擦纳米发电技术集成，形成基于折纸-摩擦纳米发电原理的自驱动绿色智能轮胎。</view>
+    <view class='margin-top-sm'>    一方面俘获车辆行驶时浪费的机械能，节能减排，缓解能源危机；另一方面，感知车速、动态车载及路表抗滑等车路信息，为提升行车安全及车路协同贡献力量。</view>
+    <view class='margin-top-sm'>    更多功能敬请期待！</view>
+  </view>
+</view>

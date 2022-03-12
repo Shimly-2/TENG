@@ -1,0 +1,85 @@
+<wxs module="utils">
+  module.exports.max = function(n1, n2) {
+    return Math.max(n1, n2)
+  }
+  module.exports.len = function(arr) {
+    arr = arr || []
+    return arr.length
+  }
+</wxs>
+
+<!-- <scroll-view class="scrollPage2">
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none'  class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view> -->
+<!-- <view class="card"> -->
+<scroll-view class="scrollPage2">
+  <view class="nav-list">
+      <navigator open-type="navigate"  url="" bindtap="startClear" class="nav-li bg-cyan">
+        <view class="nav-title">清空日志</view>
+        <view class="nav-name">Clear blelog</view>
+        <text class='cuIcon-copy'></text>
+      </navigator>
+      <navigator open-type="navigate"  url="" bindtap="startScan"  class="nav-li bg-blue">
+        <view class="nav-title">搜索蓝牙</view>
+        <view class="nav-name">Serach bluetooth</view>
+        <text class='cuIcon-btn'></text>
+      </navigator>
+  </view>
+</scroll-view>
+<!-- </view> -->
+<!-- <view class='scan-view'>
+    <button class="bg-gradual-blue padding radius text-center shadow-blur" type="primary" bindtap="startClear">
+      <text>清空log日志</text>
+      <text class="cuIcon-copy"></text>
+    </button>
+    <button class="bg-gradual-blue padding radius text-center shadow-blur" type="primary" bindtap="startScan">
+      <text>扫描蓝牙设备</text>
+      <text class="cuIcon-btn"></text>
+    </button>
+    <view class="cu-tabbar-height"></view>
+  </view> -->
+
+<view class="card">
+<view class="cu-bar bg-white solid-bottom">
+    <view>
+      <text class="cuIcon-title text-orange"></text>蓝牙适配器日志：
+    </view>
+  </view>
+<view>
+    <scroll-view scroll-y="true" class='text-box scroll-list'>
+      <view class="cu-item">
+        <view class="content">
+            <text>{{textLog}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+ 
+<view class="card">
+  <view class="cu-bar bg-white solid-bottom">
+    <view>
+      <text class="cuIcon-title text-orange"></text>已发现 {{devices.length}} 个外围设备：
+    </view>
+  </view>
+<!-- <view> -->
+  <!-- <view class="devices_summary">已发现 {{devices.length}} 个外围设备：</view> -->
+  <scroll-view class="device_list" scroll-y scroll-with-animation>
+    <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" bindtap="createBLEConnection" class="device_item" hover-class="device_item_hover">
+      <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+      <view style="font-size: 10px">信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+      <view style="font-size: 10px">UUID: {{item.deviceId}}</view>
+      <view style="font-size: 10px">Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
+    </view>
+  </scroll-view>
+</view>
+<!-- <view class='page-body'>
+
+</view> -->

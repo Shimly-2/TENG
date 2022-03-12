@@ -1,0 +1,89 @@
+<!--pages/funtionPage/funtionPage.wxml-->
+
+<view class='card'>
+<view class="cu-bar bg-white solid-bottom">
+    <view>
+      <text class="cuIcon-title text-orange"></text>当前连接的蓝牙设备是：
+    </view>
+  </view>
+<view>
+    <scroll-view scroll-y="true" class='text-box2 scroll-list'>
+      <view class="cu-item">
+        <view class="content">
+            <text class="cuIcon-discoverfill text-orange"></text>
+            <text>  设备名：{{name}} \n</text>
+            <text class="cuIcon-discoverfill text-orange"></text>
+            <text>  设备ID：{{deviceId}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- <view class='bluetooth-detail'>
+  <view>当前连接的蓝牙设备是：</view>
+  <view>设备名：{{name}}</view>
+  <view>设备ID：{{deviceId}}</view>
+</view> -->
+
+<view class='card'>
+<view class="cu-bar bg-white solid-bottom">
+    <view>
+      <text class="cuIcon-title text-orange"></text>展示log日志(可滑动查看)：
+    </view>
+  </view>
+<view>
+  <scroll-view scroll-y="true" class='text-box3 scroll-list'>
+      <view class="cu-item">
+        <view class="content">
+            <text>{{textLog}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- <view class='card'>
+  <view>展示log日志(可滑动查看)：</view>
+  <view>
+    <scroll-view scroll-y="true" class='text-box list'>
+      <text>{{textLog}}</text>
+    </scroll-view>
+  </view>
+</view> -->
+<view class="kongge"></view>
+
+<scroll-view class="scrollPage2">
+  <view class="nav-list">
+      <navigator open-type="navigate" hover-class='none' url="" bindtap="startClear" class="nav-li bg-cyan">
+        <view class="nav-title">速度</view>
+        <text class="mytext">0.000m/s</text>
+        <view class="nav-name">Car speed</view>
+        
+      </navigator>
+      <navigator open-type="navigate" hover-class='none' url="" bindtap="startScan"  class="nav-li bg-blue">
+        <view class="nav-title">胎压</view>
+        <text class="mytext">0.000bar</text>
+        <view class="nav-name">Tire pressure</view>
+
+      </navigator>
+  </view>
+</scroll-view>
+
+<view class="function-button-div2">
+     <button type="primary" class='function-button_left' bindtap="startClear">清日志</button>
+     <!-- <button type="primary" class='function-button_middle' bindtap="setMTUClick">最大MTU</button> -->
+     <button type="primary" class='function-button_right' bindtap="closeBLEConnection">断开连接</button>
+     <button type="primary" class='function-button_top' bindtap="startIndicate">开始监听</button>
+  </view>
+<!-- 底部按钮 -->
+<view class='function-button-div'>
+  <view class='function-input'>
+    <input class="input" type="text" cursor-spacing="20" bindinput="orderInput" placeholder="请输入指令" value='{{accountInputStr}}' />
+    <button bindtap='sentOrder'>发送</button>
+  </view>
+
+  
+
+
+</view>

@@ -1,0 +1,22 @@
+.scrollPage image{
+  margin-top: 20px;
+  margin-left: 56px;
+  margin-bottom: 20px;
+}
+
+.scrollPage .mytext{
+  display: flex;    /*设置显示样式**/
+  align-items: center;    /**子view垂直居中*/
+  font-size: 30px;
+  /* color: #0081ff; */
+  font-family: 'Courier New', Courier, monospace;
+  /* margin-left: 125px; */
+  vertical-align: center; /**垂直居中*/
+  justify-content: center; /**内容居中*/
+  text-shadow: 5px 5px 6px #c7c8c9e7;
+  font-weight:700;
+}
+
+.scrollPage .kongge{
+  padding-top: 10px;
+}

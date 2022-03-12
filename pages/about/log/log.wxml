@@ -1,0 +1,46 @@
+<!-- <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">日志</view></cu-custom> -->
+<view class="cu-timeline">
+  <view class="cu-item text-green">
+    <view class="bg-gradual-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0</view>
+        <view class="cu-tag line-white">2022/03/05</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.增加蓝牙功能</view>
+        <view>2.增加主页面</view>
+        <view>3.增加调试功能</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.2</view>
+        <view class="cu-tag line-white">2022/03/10</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.新增关于页面</view>
+        <view>2.修复一些属性错误</view>
+        <view>3.修改图表样式</view>
+        <view>4.增加速度、胎压窗口</view>
+        <view>5.优化一些细节</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.0</view>
+        <view class="cu-tag line-white">2022/03/12</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.修改字体样式</view>
+        <view>2.增加LOGO图样</view>
+        <view>3.优化源码细节，精简代码</view>
+        <view></view>
+      </view>
+    </view>
+  </view>
+  
+</view>
