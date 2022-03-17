@@ -7,11 +7,31 @@
     box-sizing: border-box;
     border-bottom: 1px solid #ddd;
 }
-.card {
+.card1 {
   border-radius: 10rpx;
   background-color: #fff;
-  margin: 20rpx;
-  padding: 20rpx;
+  /* margin: 15rpx; */
+  margin-left: 42rpx;
+  margin-right: 42rpx;
+  margin-bottom: 30rpx;
+  padding-top: 15rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 15rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0,0,0,.3);
+}
+
+.card2 {
+  border-radius: 10rpx;
+  background-color: #fff;
+  /* margin: 15rpx; */
+  margin-left: 42rpx;
+  margin-right: 42rpx;
+  margin-bottom: 10rpx;
+  padding-top: 15rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 15rpx;
   box-shadow: 0 2rpx 4rpx rgba(0,0,0,.3);
 }
 .list {
@@ -20,7 +40,7 @@
 
 .text-box2{
   /* margin-bottom: 10rpx; */
-  margin-top: 10rpx;
+  /* margin-top: 10rpx; */
   /* padding: 10rpx 0; */
   display: flex;
   max-height: 200rpx;
@@ -34,7 +54,7 @@
 }
 
 .kongge{
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .text-box3{
@@ -66,7 +86,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0rpx 10%; 
+  /* margin: 0rpx 10%;  */
 }
 .input{
   border: 1rpx solid #666;

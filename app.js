@@ -31,6 +31,19 @@ App({
         console.log("获取信息失败", res)
       }
     })
+    // 获取系统状态栏信息
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        let capsule = wx.getMenuButtonBoundingClientRect();
+        if (capsule) {
+         	this.globalData.Custom = capsule;
+        	this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+        } else {
+        	this.globalData.CustomBar = e.statusBarHeight + 50;
+        }
+      }
+    })
 
     this.globalData.sysinfo = wx.getSystemInfoSync();
   },
@@ -95,6 +108,7 @@ App({
       mask: true
     });
   },
+
 
   isBlank: function(str) {
     if (Object.prototype.toString.call(str) === '[object Undefined]') { //空

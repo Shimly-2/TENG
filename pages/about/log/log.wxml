@@ -42,5 +42,19 @@
       </view>
     </view>
   </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.02</view>
+        <view class="cu-tag line-white">2022/03/13</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.修改数据接收界面</view>
+        <view>2.更改传输数据格式</view>
+        <view>3.优化主界面</view>
+        <view></view>
+      </view>
+    </view>
+  </view>
   
 </view>

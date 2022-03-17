@@ -1,29 +1,30 @@
+const app = getApp();
 Component({
   options: {
     addGlobalClass: true,
   },
   data: {
     elements: [{
-        title: '布局',
-        name: 'layout',
+        title: '智能',
+        name: 'Intelligence',
         color: 'red',
         icon: 'newsfill'
       },
       {
-        title: '背景',
-        name: 'background',
+        title: '低碳',
+        name: 'Low-carbon',
         color: 'orange',
         icon: 'colorlens'
       },
       {
-        title: '文本',
-        name: 'text',
+        title: '环保',
+        name: 'Environmental',
         color: 'yellow',
         icon: 'font'
       },
       {
-        title: '图标 ',
-        name: 'icon',
+        title: '高效 ',
+        name: 'High-efficiency',
         color: 'mauve',
         icon: 'icon'
       },
@@ -64,5 +65,34 @@ Component({
       //   icon: 'loading2'
       // },
     ],
+  },
+  isLoading (e) {
+    this.setData({
+      isLoad: e.detail.value
+    })
+  },
+  loadModal () {
+    this.setData({
+      loadModal: true
+    })
+    setTimeout(()=> {
+      this.setData({
+        loadModal: false
+      })
+    }, 2000)
+  },
+  loadProgress(){
+    this.setData({
+      loadProgress: this.data.loadProgress+3
+    })
+    if (this.data.loadProgress<100){
+      setTimeout(() => {
+        this.loadProgress();
+      }, 100)
+    }else{
+      this.setData({
+        loadProgress: 0
+      })
+    }
   }
 })

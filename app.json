@@ -15,7 +15,6 @@
     "navigationBarTitleText": "智能传感检测终端",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#F8F8F8"
-    
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"

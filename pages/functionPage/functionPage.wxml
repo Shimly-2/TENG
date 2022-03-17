@@ -1,6 +1,24 @@
 <!--pages/funtionPage/funtionPage.wxml-->
+<view class="kongge"></view>
 
-<view class='card'>
+<scroll-view class="scrollPage2">
+  <view class="nav-list">
+      <navigator open-type="navigate" hover-class='none' url="" bindtap="startClear" class="nav-li bg-cyan">
+        <view class="nav-title">速度</view>
+        <text class="mytext">{{maxvalue_ADC}}m/s</text>
+        <view class="nav-name">Car speed</view>
+        
+      </navigator>
+      <navigator open-type="navigate" hover-class='none' url="" bindtap="startScan"  class="nav-li bg-blue">
+        <view class="nav-title">胎压</view>
+        <text class="mytext">{{Freq_ADC}}bar</text>
+        <view class="nav-name">Tire pressure</view>
+
+      </navigator>
+  </view>
+</scroll-view>
+
+<view class='card1'>
 <view class="cu-bar bg-white solid-bottom">
     <view>
       <text class="cuIcon-title text-orange"></text>当前连接的蓝牙设备是：
@@ -26,10 +44,10 @@
   <view>设备ID：{{deviceId}}</view>
 </view> -->
 
-<view class='card'>
+<view class='card2'>
 <view class="cu-bar bg-white solid-bottom">
     <view>
-      <text class="cuIcon-title text-orange"></text>展示log日志(可滑动查看)：
+      <text class="cuIcon-title text-orange"></text>蓝牙设备信息日志(可滑动查看)：
     </view>
   </view>
 <view>
@@ -51,9 +69,9 @@
     </scroll-view>
   </view>
 </view> -->
-<view class="kongge"></view>
+<!-- <view class="kongge"></view> -->
 
-<scroll-view class="scrollPage2">
+<!-- <scroll-view class="scrollPage2">
   <view class="nav-list">
       <navigator open-type="navigate" hover-class='none' url="" bindtap="startClear" class="nav-li bg-cyan">
         <view class="nav-title">速度</view>
@@ -68,14 +86,38 @@
 
       </navigator>
   </view>
-</scroll-view>
+</scroll-view> -->
 
-<view class="function-button-div2">
-     <button type="primary" class='function-button_left' bindtap="startClear">清日志</button>
-     <!-- <button type="primary" class='function-button_middle' bindtap="setMTUClick">最大MTU</button> -->
+<view class="grid col-3 padding-sm">
+  <view class="padding-sm" bindtap="startClear">
+    <view class="bg-red padding radius text-center shadow-blur">
+      <text class="cuIcon-vipcard lg text-white"></text>
+      <view class="text-lg">清空日志</view>
+      <view class="text-Abc">Clear log</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="closeBLEConnection">
+    <view class="bg-orange padding radius text-center shadow-blur">
+      <text class="cuIcon-unlock lg"></text>
+      <view class="text-lg">断开连接</view>
+      <view class="text-Abc">Cut off</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="startIndicate">
+    <view class="bg-yellow padding radius text-center shadow-blur">
+    <text class="cuIcon-subscription lg"></text>
+      <view class="text-lg">开始测量</view>
+      <view class="text-Abc">Start</view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="function-button-div2">
+     <view class="bg-mauve padding radius text-center shadow-blur" bindtap="startClear">清日志</view>
+     <button type="primary" class='function-button_middle' bindtap="setMTUClick">最大MTU</button>
      <button type="primary" class='function-button_right' bindtap="closeBLEConnection">断开连接</button>
      <button type="primary" class='function-button_top' bindtap="startIndicate">开始监听</button>
-  </view>
+  </view> -->
 <!-- 底部按钮 -->
 <view class='function-button-div'>
   <view class='function-input'>

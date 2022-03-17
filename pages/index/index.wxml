@@ -1,6 +1,4 @@
 <!--pages/index/index.wxml-->
-
-
 <basics wx:if="{{PageCur=='basics'}}"></basics>
   <plugin wx:if="{{PageCur=='plugin'}}"></plugin>
   <about wx:if="{{PageCur=='about'}}"></about>

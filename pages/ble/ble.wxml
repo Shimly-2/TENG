@@ -49,7 +49,7 @@
 <view class="card">
 <view class="cu-bar bg-white solid-bottom">
     <view>
-      <text class="cuIcon-title text-orange"></text>蓝牙适配器日志：
+      <text class="cuIcon-title text-orange"></text>蓝牙适配器日志（可滑动查看）：
     </view>
   </view>
 <view>

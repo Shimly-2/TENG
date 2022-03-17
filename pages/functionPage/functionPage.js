@@ -17,7 +17,10 @@ Page({
     writeCharacteristicId: "",
     notifyCharacteristicId: "",
     connected: true,
-    canWrite: false
+    canWrite: false,
+    maxvalue_ADC:0.000,
+    Amplitude_ADC:0.000,
+    Freq_ADC:0.000
   },
 
   /**
@@ -183,7 +186,11 @@ Page({
       // console.log('characteristic value comed(buf):', res.value[0],res.value[1]);
       // console.log('characteristic value comed(hex):', utils.buf2hex(res.value))
       f32 = new Float32Array(res.value);
-      console.log('f32:', f32[0]);
+      console.log('f32:', f32[0],f32[1],f32[2]);
+      var maxvalue_ADC1=f32[0].toFixed(2);
+      var Amplitude_ADC1=f32[1].toFixed(2);
+      var Freq_ADC1=f32[2].toFixed(2);
+      console.log('var:', maxvalue_ADC1,Amplitude_ADC1,Freq_ADC1);
       var resValue = utils.uint2float(f32); //16进制字符串
       console.log('thisd', resValue);
       var resValueStr = utils.hexToString(resValue);
@@ -191,6 +198,9 @@ Page({
       var log0 = that.data.textLog + "成功获取：" + resValueStr + "\n";
       that.setData({
         textLog: log0,
+        maxvalue_ADC: maxvalue_ADC1,
+        Amplitude_ADC: Amplitude_ADC1,
+        Freq_ADC: Freq_ADC1
       });
 
     });
